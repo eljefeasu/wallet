@@ -70,4 +70,14 @@ class Transaction < ActiveRecord::Base
     @biggest_expense_current_month
   end
 
+  def self.biggest_expense_ever
+    @biggest_expense_ever = 0
+    self.all.each do |transaction|
+      if (transaction.amount > @biggest_expense_ever) && (transaction.debit_or_credit == "Debit")
+        @biggest_expense_ever = transaction.amount
+      end
+    end
+    @biggest_expense_ever
+  end
+
 end

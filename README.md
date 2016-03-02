@@ -32,6 +32,6 @@ I believe it will take 6 hours to complete this assignment
 - [x] Dashboard includes total amount spent in the previous month
 - [x] Dashboard includes total number of transactions in the current month
 - [x] Dashboard includes total number of transactions in the previous month
-- [ ] Dashboard includes the biggest expense of the current month
-- [ ] Dashboard includes the biggest expense ever
+- [x] Dashboard includes the biggest expense of the current month
+- [x] Dashboard includes the biggest expense ever
 - [ ] Dashboard includes the place/person where you have spent the most money (all time)
