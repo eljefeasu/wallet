@@ -10,7 +10,7 @@ I believe it will take 6 hours to complete this assignment
 #### Part One
 
 - [x] Generate scaffold for wallet
-- [ ] User should be able to go to the root URL of the application and see a Dashboard
+- [x] User should be able to go to the root URL of the application and see a Dashboard
 - [ ] The Dashboard should include the total amount of money in his/her account
 - [ ] The Dashboard should include the total number of transactions ever
 - [ ] The Dashboard should include a link to the list of transactions

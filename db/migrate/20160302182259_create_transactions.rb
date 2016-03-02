@@ -3,7 +3,7 @@ class CreateTransactions < ActiveRecord::Migration
     create_table :transactions do |t|
       t.string :description
       t.decimal :amount
-      t.boolean :debit_or_credit
+      t.string :debit_or_credit
 
       t.timestamps null: false
     end

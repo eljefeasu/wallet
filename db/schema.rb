@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20160302182259) do
   create_table "transactions", force: :cascade do |t|
     t.string   "description"
     t.decimal  "amount"
-    t.boolean  "debit_or_credit"
+    t.string   "debit_or_credit"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

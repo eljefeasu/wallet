@@ -20,8 +20,10 @@
     <%= f.text_field :amount %>
   </div>
   <div class="field">
-    <%= f.label :debit_or_credit %><br>
-    <%= f.check_box :debit_or_credit %>
+    <%= f.label :debit_or_credit, 'Credit' %>
+    <%= f.radio_button :debit_or_credit, 'Credit', :value => 'Credit'%>
+    <%= f.label :debit_or_credit, 'Debit' %>
+    <%= f.radio_button :debit_or_credit, 'Debit', :checked => true, :value => 'Debit' %>
   </div>
   <div class="actions">
     <%= f.submit %>
