@@ -14,8 +14,8 @@ I believe it will take 6 hours to complete this assignment
 - [x] The Dashboard should include the total amount of money in his/her account
 - [x] The Dashboard should include the total number of transactions ever
 - [x] The Dashboard should include a link to the list of transactions
-- [ ] The Dashboard should include a link to create a new transaction
-- [ ] The Dashboard should give a message if the balance on the account is negative
+- [x] The Dashboard should include a link to create a new transaction
+- [x] The Dashboard should give a message if the balance on the account is negative
 - [ ] Scaffolded page which allows user to edit transaction
 - [ ] Scaffolded page which allows user to delete transaction
 - [ ] Total and count on the root page should update as the transactions change
