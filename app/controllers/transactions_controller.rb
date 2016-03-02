@@ -63,8 +63,9 @@ class TransactionsController < ApplicationController
 
   def dashboard
     @transactions = Transaction.all
-    @balance = Transaction.balance  
+    @balance = Transaction.balance
     @total_current_month = Transaction.total_current_month
+    @total_previous_month = Transaction.total_previous_month
   end
 
   private

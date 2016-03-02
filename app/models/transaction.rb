@@ -22,4 +22,16 @@ class Transaction < ActiveRecord::Base
     @total_current_month
   end
 
+  def self.total_previous_month
+    @total_previous_month = 0
+    current_time = Time.now
+    previous_month = current_time.mon - 1
+    self.all.each do |transaction|
+      if ((transaction.debit_or_credit == "Debit") && (transaction.created_at.mon == previous_month))
+        @total_previous_month += transaction.amount
+      end
+    end
+    @total_previous_month
+  end
+
 end
