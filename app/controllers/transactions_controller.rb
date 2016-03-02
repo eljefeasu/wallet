@@ -62,6 +62,7 @@ class TransactionsController < ApplicationController
   end
 
   def dashboard
+    @balance = Transaction.balance
     @transactions = Transaction.all
   end
 

@@ -1,11 +1,4 @@
-<% credits = 0 %>
-<% debits = 0%>
-<% @transactions.each do |transaction| %>
-  <% credits += transaction.amount if transaction.debit_or_credit == "Credit" %>
-  <% debits += transaction.amount if transaction.debit_or_credit == "Debit" %>
-<% end %>
-
-<% if (credits - debits) < 0 %>
+<% if @balance < 0 %>
   <p id="warning">What are you thinking?!?! You can't have a negative balance! Make a deposit!!! RIGHT NOW!</p>
 <% end %>
 
@@ -20,10 +13,10 @@
 
   <tbody>
     <tr>
-      <% if (credits - debits) < 0 %>
-        <td><font color=red>$<%= credits - debits %><font></td>
+      <% if @balance < 0 %>
+        <td><font color=red><%= number_to_currency(@balance) %><font></td>
       <% else %>
-        <td><font color=green>$<%= credits - debits %></font></td>
+        <td><font color=green><%= number_to_currency(@balance) %></font></td>
       <% end %>
     </tr>
   </tbody>

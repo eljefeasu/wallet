@@ -1,8 +1,8 @@
 class Transaction < ActiveRecord::Base
-  def balance
+  def self.balance
     credits = 0
     debits = 0
-    @transactions.each do |transaction|
+    self.all.each do |transaction|
       credits += transaction.amount if transaction.debit_or_credit == "Credit"
       debits += transaction.amount if transaction.debit_or_credit == "Debit"
     end

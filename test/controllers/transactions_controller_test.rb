@@ -3,6 +3,7 @@ require 'test_helper'
 class TransactionsControllerTest < ActionController::TestCase
   setup do
     @transaction = transactions(:one)
+    @t = Transaction.new(description: "Xbox", amount: 300.00, debit_or_credit: "Debit")
   end
 
   test "should get index" do
@@ -45,5 +46,15 @@ class TransactionsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to transactions_path
+  end
+
+  test "should get dashboard" do
+    get :dashboard
+    assert_response :success
+  end
+
+  test "dashboard not nil" do
+    get :dashboard
+    assert_not_nil assigns(:transactions)
   end
 end

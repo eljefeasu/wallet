@@ -16,9 +16,9 @@ I believe it will take 6 hours to complete this assignment
 - [x] The Dashboard should include a link to the list of transactions
 - [x] The Dashboard should include a link to create a new transaction
 - [x] The Dashboard should give a message if the balance on the account is negative
-- [ ] Scaffolded page which allows user to edit transaction
-- [ ] Scaffolded page which allows user to delete transaction
-- [ ] Total and count on the root page should update as the transactions change
+- [x] Scaffolded page which allows user to edit transaction
+- [x] Scaffolded page which allows user to delete transaction
+- [x] Total and count on the root page should update as the transactions change
 - [x] Have a database column which shows the name of the person/organization receiving the money
 - [x] Create a column for amount and a column indicating whether debit or credit
 - [x] Choose decimal
