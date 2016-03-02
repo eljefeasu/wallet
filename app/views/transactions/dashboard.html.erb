@@ -4,39 +4,24 @@
 
 <h1>Dashboard</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Total Amount Of Money In Your Account: </th>
-    </tr>
-  </thead>
+<p>
+  <strong>Total Amount Of Money In Your Account: </strong>
+    <% if @balance < 0 %>
+      <font color=red><%= number_to_currency(@balance) %><font>
+    <% else %>
+      <font color=green><%= number_to_currency(@balance) %></font>
+    <% end %>
+</p>
 
-  <tbody>
-    <tr>
-      <% if @balance < 0 %>
-        <td><font color=red><%= number_to_currency(@balance) %><font></td>
-      <% else %>
-        <td><font color=green><%= number_to_currency(@balance) %></font></td>
-      <% end %>
-    </tr>
-  </tbody>
-</table>
+<p>
+  <strong>Total Number Of Transactions: </strong>
+  <%= @transactions.size %>
+</p>
 
-<br>
-
-<table>
-  <thead>
-    <tr>
-      <th>Total Number Of Transactions: </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td><%= @transactions.size %></td>
-    </tr>
-  </tbody>
-</table>
+<p>
+  <strong>Total Amount Spent Current Month: </strong>
+  <%= number_to_currency(@total_current_month) %>
+</p>
 
 <br>
 
