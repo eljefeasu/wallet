@@ -47,4 +47,10 @@ class TransactionTest < ActiveSupport::TestCase
     assert_equal 30, @transactions.biggest_expense_ever
   end
 
+  test "place spent the most money" do
+    @transactions = Transaction.all
+    t = Transaction.create!(description: "Movies", amount: 30, debit_or_credit: "Debit")
+    assert_equal "Movies", @transactions.place_spent_most_money
+  end
+
 end

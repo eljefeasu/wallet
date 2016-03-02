@@ -70,6 +70,7 @@ class TransactionsController < ApplicationController
     @transactions_previous_month = Transaction.transactions_previous_month
     @biggest_expense_current_month = Transaction.biggest_expense_current_month
     @biggest_expense_ever = Transaction.biggest_expense_ever
+    @place_spent_most_money = Transaction.place_spent_most_money
   end
 
   private

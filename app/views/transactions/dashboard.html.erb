@@ -7,7 +7,7 @@
 <p>
   <strong>Total Amount Of Money In Your Account: </strong>
     <% if @balance < 0 %>
-      <font color=red><%= number_to_currency(@balance) %><font>
+      <font color=red><%= number_to_currency(@balance) %></font>
     <% else %>
       <font color=green><%= number_to_currency(@balance) %></font>
     <% end %>
@@ -46,6 +46,11 @@
 <p>
   <strong>Biggest Expense Ever: </strong>
   <%= number_to_currency(@biggest_expense_ever) %>
+</p>
+
+<p>
+  <strong>Place Spent The Most Money: </strong>
+  <%= @place_spent_most_money %>
 </p>
 
 <br>

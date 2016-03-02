@@ -80,4 +80,22 @@ class Transaction < ActiveRecord::Base
     @biggest_expense_ever
   end
 
+  def self.place_spent_most_money
+    @place_spent_most_money = ""
+    @most_money = 0
+    self.all.each do |transaction|
+      name = transaction.description
+      place_total = transaction.amount
+        self.all.each do |t|
+          if t.description == name
+            place_total += t.amount
+          end
+        end
+      if place_total > @most_money
+        @place_spent_most_money = transaction.description
+      end
+    end
+    @place_spent_most_money
+  end
+
 end
