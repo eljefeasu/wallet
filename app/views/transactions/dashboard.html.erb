@@ -38,6 +38,11 @@
   <%= @transactions_previous_month %>
 </p>
 
+<p>
+  <strong>Biggest Expense Current Month: </strong>
+  <%= number_to_currency(@biggest_expense_current_month) %>
+</p>
+
 <br>
 
 <%= link_to 'List Of Transactions', transactions_path %><br>

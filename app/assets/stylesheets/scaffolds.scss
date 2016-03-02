@@ -19,13 +19,13 @@
 }
 
 #checkout::before {
-  content: '★ ';
-  color:#888888;
+  content: '$ ';
+  color:#5b5b5b;
 }
 
 #checkout:after {
-  content: ' ★';
-  color:#888888;
+  content: ' $';
+  color:#5b5b5b;
 }
 
 

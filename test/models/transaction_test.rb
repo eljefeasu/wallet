@@ -35,4 +35,10 @@ class TransactionTest < ActiveSupport::TestCase
     assert_equal 0, @transactions.transactions_previous_month
   end
 
+  test "biggest expense current month" do
+    @transactions = Transaction.all
+    t = Transaction.create!(amount: 30, debit_or_credit: "Debit")
+    assert_equal 30, @transactions.biggest_expense_current_month
+  end
+
 end

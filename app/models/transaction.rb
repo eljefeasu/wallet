@@ -58,4 +58,16 @@ class Transaction < ActiveRecord::Base
     @transactions_previous_month
   end
 
+  def self.biggest_expense_current_month
+    @biggest_expense_current_month = 0
+    current_time = Time.now
+    current_month = current_time.mon
+    self.all.each do |transaction|
+      if (transaction.created_at.mon == current_month) && (transaction.amount > @biggest_expense_current_month) && (transaction.debit_or_credit == "Debit")
+        @biggest_expense_current_month = transaction.amount
+      end
+    end
+    @biggest_expense_current_month
+  end
+
 end
