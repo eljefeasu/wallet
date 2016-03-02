@@ -46,4 +46,16 @@ class Transaction < ActiveRecord::Base
     @transactions_current_month
   end
 
+  def self.transactions_previous_month
+    @transactions_previous_month = 0
+    current_time = Time.now
+    previous_month = current_time.mon - 1
+    self.all.each do |transaction|
+      if transaction.created_at.mon == previous_month
+        @transactions_previous_month += 1
+      end
+    end
+    @transactions_previous_month
+  end
+
 end
