@@ -12,7 +12,7 @@ I believe it will take 6 hours to complete this assignment
 - [x] Generate scaffold for wallet
 - [x] User should be able to go to the root URL of the application and see a Dashboard
 - [x] The Dashboard should include the total amount of money in his/her account
-- [ ] The Dashboard should include the total number of transactions ever
+- [x] The Dashboard should include the total number of transactions ever
 - [ ] The Dashboard should include a link to the list of transactions
 - [ ] The Dashboard should include a link to create a new transaction
 - [ ] The Dashboard should give a message if the balance on the account is negative
