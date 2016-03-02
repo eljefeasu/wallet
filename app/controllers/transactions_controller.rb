@@ -66,6 +66,7 @@ class TransactionsController < ApplicationController
     @balance = Transaction.balance
     @total_current_month = Transaction.total_current_month
     @total_previous_month = Transaction.total_previous_month
+    @transactions_current_month = Transaction.transactions_current_month
   end
 
   private

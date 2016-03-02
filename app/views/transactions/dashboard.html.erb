@@ -28,6 +28,11 @@
   <%= number_to_currency(@total_previous_month) %>
 </p>
 
+<p>
+  <strong>Total Transactions Current Month: </strong>
+  <%= @transactions_current_month %>
+</p>
+
 <br>
 
 <%= link_to 'List Of Transactions', transactions_path %><br>

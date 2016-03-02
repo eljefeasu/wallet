@@ -23,4 +23,10 @@ class TransactionTest < ActiveSupport::TestCase
     assert_equal 0, @transactions.total_previous_month
   end
 
+  test "transactions current month" do
+    @transactions = Transaction.all
+    t = Transaction.create!(amount: 30, debit_or_credit: "Debit")
+    assert_equal 3, @transactions.transactions_current_month
+  end
+
 end
