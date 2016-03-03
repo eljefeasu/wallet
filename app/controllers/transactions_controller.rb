@@ -63,14 +63,6 @@ class TransactionsController < ApplicationController
 
   def dashboard
     @transactions = Transaction.all
-    @balance = Transaction.balance
-    @total_current_month = Transaction.total_current_month
-    @total_previous_month = Transaction.total_previous_month
-    @transactions_current_month = Transaction.transactions_current_month
-    @transactions_previous_month = Transaction.transactions_previous_month
-    @biggest_expense_current_month = Transaction.biggest_expense_current_month
-    @biggest_expense_ever = Transaction.biggest_expense_ever
-    @place_spent_most_money = Transaction.place_spent_most_money
   end
 
   private

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Transactions</h1>
+<h1>List Of Transactions</h1>
 
 <table>
   <thead>
@@ -16,7 +16,7 @@
     <% @transactions.each do |transaction| %>
       <tr>
         <td><%= transaction.description %></td>
-        <td><%= transaction.amount %></td>
+        <td><%= number_to_currency(transaction.amount) %></td>
         <td><%= transaction.debit_or_credit %></td>
         <td><%= link_to 'Show', transaction %></td>
         <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
@@ -28,4 +28,5 @@
 
 <br>
 
+<%= link_to 'Dashboard', root_path %><br>
 <%= link_to 'New Transaction', new_transaction_path %>

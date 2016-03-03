@@ -1,10 +1,30 @@
 # Wallet App
 
-Description of wallet application
+This is an app that lets a user keep track of transactions on an account.
+
+The root directory pulls up the 'Dashboard'. On the Dashboard you can view:
+  * The total amount of money in your account
+  * The total number of transactions you have had
+  * The total amount of money spent this month
+  * The total amount of money spent the previous month
+  * The total transactions you've had this month
+  * The total transactions you've had the previous month
+  * The biggest expense of the current month
+  * The biggest expense of all time
+  * The person/place you have spent the most money
+
+/transactions will show a list of all transactions
+
+/transactions/new will allow a user to input information to add a new transaction
+
+Functions exist to edit and also delete any transaction that has been entered
 
 ### Estimate for time to complete
 
 I believe it will take 6 hours to complete this assignment
+
+*Reflection: I overestimated how long it would take to do this assignment. It seemed pretty difficult
+when reading through the requirements, but once I broke it down into smaller chunks it went much quicker*
 
 
 #### Part One
