@@ -62,7 +62,7 @@ class TransactionsController < ApplicationController
   end
 
   def dashboard
-    @statistics = Transaction.statistics
+    @transactions = Transaction.all
   end
 
   private

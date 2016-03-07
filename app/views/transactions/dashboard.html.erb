@@ -1,58 +1,56 @@
-<% if Transaction.balance < 0 %>
+<% if @transactions.balance < 0 %>
   <p id="warning">What are you thinking?!?! You can't have a negative balance! Make a deposit!!! RIGHT NOW!</p>
 <% end %>
 
 <h1>Dashboard</h1>
 
-Last transaction: <%= geoff(Transaction.order(:created_at).last.created_at) %>
-
 <p>
   <strong>Total Amount Of Money In Your Account: </strong>
-    <% if Transaction.balance < 0 %>
-      <font color=red><%= number_to_currency(Transaction.balance) %></font>
+    <% if @transactions.balance < 0 %>
+      <font color=red><%= number_to_currency(@transactions.balance) %></font>
     <% else %>
-      <font color=green><%= number_to_currency(Transaction.balance) %></font>
+      <font color=green><%= number_to_currency(@transactions.balance) %></font>
     <% end %>
 </p>
 
 <p>
   <strong>Total Number Of Transactions: </strong>
-  <%= Transaction.count %>
+  <%= @transactions.size %>
 </p>
 
 <p>
   <strong>Total Amount Spent Current Month: </strong>
-  <%= number_to_currency(Transaction.total_current_month) %>
+  <%= number_to_currency(@transactions.total_current_month) %>
 </p>
 
 <p>
   <strong>Total Amount Spent Previous Month: </strong>
-  <%= number_to_currency(Transaction.total_previous_month) %>
+  <%= number_to_currency(@transactions.total_previous_month) %>
 </p>
 
 <p>
   <strong>Total Transactions Current Month: </strong>
-  <%= Transaction.transactions_current_month %>
+  <%= @transactions.transactions_current_month %>
 </p>
 
 <p>
   <strong>Total Transactions Previous Month: </strong>
-  <%= Transaction.transactions_previous_month %>
+  <%= @transactions.transactions_previous_month %>
 </p>
 
 <p>
   <strong>Biggest Expense Current Month: </strong>
-  <%= number_to_currency(Transaction.biggest_expense_current_month) %>
+  <%= number_to_currency(@transactions.biggest_expense_current_month) %>
 </p>
 
 <p>
   <strong>Biggest Expense Ever: </strong>
-  <%= number_to_currency(@statistics[:biggest_expense_ever]) %>
+  <%= number_to_currency(@transactions.biggest_expense_ever) %>
 </p>
 
 <p>
   <strong>Place Spent The Most Money: </strong>
-  <%= @statistics[:place_spent_most_money] %>
+  <%= @transactions.place_spent_most_money %>
 </p>
 
 <br>
