@@ -51,10 +51,6 @@ class TransactionsControllerTest < ActionController::TestCase
   test "should get dashboard" do
     get :dashboard
     assert_response :success
-  end
-
-  test "dashboard not nil" do
-    get :dashboard
-    assert_not_nil assigns(:transactions)
+    assert_not_nil assigns(:statistics)
   end
 end
